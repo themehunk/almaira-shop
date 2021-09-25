@@ -127,6 +127,14 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                 'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
+            'th-advance-product-search' => array(
+                'name' => esc_html__( 'Th Advance Product Search', 'almaira-shop' ),
+                'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+            ),
+            'th-variation-swatches' => array(
+                'name' => esc_html__( 'Th Variation Swatches', 'almaira-shop' ),
+                'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
+            ),
              'yith-woocommerce-wishlist' => array(
                  'name' => esc_html__( 'YITH WooCommerce Wishlist', 'almaira-shop' ),
                  'active_filename' => 'yith-woocommerce-wishlist/init.php',

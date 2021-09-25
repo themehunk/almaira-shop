@@ -664,6 +664,12 @@ if ( ! class_exists( 'Almaira_Shop_Admin_Settings' ) ){
                 }elseif($plugin_slug=='woocommerce'){
                 	echo'<img src="'.esc_url(ALMAIRA_SHOP_THEME_URI. 'lib/theme-option/assets/images/woocommerce.png' ).'" />'; 
                 $detail='WooCommerce is a free eCommerce plugin that allows you to sell anything, beautifully.';
+              }elseif($plugin_slug=='th-advance-product-search'){
+                	echo'<img src="'.esc_url(ALMAIRA_SHOP_THEME_URI. 'lib/theme-option/assets/images/th-advance-product-search.png' ).'" />'; 
+                $detail='Th Advaced Product Search plugin is a powerful AJAX search plugin which will display search result for Product, post and pages';
+                }elseif($plugin_slug=='th-variation-swatches'){
+                	echo'<img src="'.esc_url(ALMAIRA_SHOP_THEME_URI. 'lib/theme-option/assets/images/th-variation-swatches.png' ).'" />'; 
+                $detail='TH Variation Swatches is a Free easy to use Swatches Plugin. This plugin will replace default swatches to professionally styled and colourful swatches.';
                 }elseif($plugin_slug=='yith-woocommerce-wishlist'){
                 	echo'<img src="'.esc_url(ALMAIRA_SHOP_THEME_URI. 'lib/theme-option/assets/images/whislist.png' ).'" />'; 
                 $detail='YITH WooCommerce Wishlist allows you to add Wishlist functionality to your e-commerce.';

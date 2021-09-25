@@ -3,8 +3,8 @@ Contributors: ThemeHunk
 Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
 Requires at least: WordPress 4.7
 Requires PHP: 5.6
-Tested up to: 5.7
-Stable tag: 1.2.3
+Tested up to: 5.8.1
+Stable tag: 1.2.4
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -23,6 +23,10 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.2.4 =
+* Th advance product search plugin added.
+* Th variation swatches plugin added.
 
 = 1.2.3 =
 * Theme Support link changed.
@@ -110,8 +114,9 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.1 =
-* WordPress 5.7 js issue resolved.
+= 1.2.4 =
+* Th advance product search plugin added.
+* Th variation swatches plugin added.
 
 
 

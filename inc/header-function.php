@@ -240,7 +240,9 @@ if($sch_icon == true || $whs_icon == true || $acc_icon == true || $crt_icon == t
 <div class="header-icon">
       <?php if(class_exists( 'WooCommerce' ) && $sch_icon == true){?>
        <span><a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
-                 <?php almaira_shop_product_search_box(); ?>
+                 <?php 
+                 almaira_shop_product_search_box(); 
+                 ?>
      <?php }
     if( class_exists( 'YITH_WCWL' )){
       if($whs_icon == true){
@@ -266,25 +268,14 @@ function almaira_shop_product_search_box(){ ?>
                     <div class="centered">
                       
                        <div id='search-box' class="wow thmkfadeInDown" data-wow-duration="1s">
-                       <form action='<?php echo esc_url( home_url( '/'  ) ); ?>' id='search-form' class="woocommerce-product-search" method='get' target='_top'>
-<?php 
-if ( class_exists( 'WooCommerce' ) ):
-$args = array(
-   'taxonomy' => 'product_cat',
-   'name' => 'product_cat',
-   'value_field' => 'slug',
-   'class' => 'something',
-   'show_option_all'   => 'All',
-);
-wp_dropdown_categories( $args );
-endif;
-?>
-   <input id='search-text' name='s' placeholder='<?php echo esc_attr(get_theme_mod('search_box_text',esc_attr_x( 'Search&hellip;', 'placeholder', 'almaira-shop' ))); ?>' class="form-control search-autocomplete" value='<?php echo get_search_query(); ?>' type='text' title='<?php echo esc_attr_x( 'Search for:', 'label', 'almaira-shop' ); ?>' />
-                        <button id='search-button' value="<?php echo esc_attr_x( 'Submit','submit button', 'almaira-shop' ); ?>" type='submit'>                     
-                          <i id="search-btn1" class="fa fa-search"></i>
-                        </button>
-                        <input type="hidden" name="post_type" value="product" />
-                       </form>
+
+                      <?php  if ( class_exists('TH_Advance_Product_Search')){
+               echo do_shortcode('[th-aps]');
+               }elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
+                $url = admin_url('themes.php?page=almaira-shop');
+                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please install th advance product search plugin','almaira-shop').'</a>';
+               } ?>
+
                    </div>
                    <span tabindex="0" id="close-btn" class="search-close-btn"></span>
                   </div>
