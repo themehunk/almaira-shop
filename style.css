@@ -4218,6 +4218,22 @@ position: relative;
     display: none;
 }
 
+/* th advance product search */
+#search-overlay .centered a.plugin-active-msg{
+    background-color: #5662eb;
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+#search-overlay .centered a.plugin-active-msg:hover{
+text-decoration: underline !important;
+}
+
 
 @media screen and (max-width: 600px){
 .logged-in #page.almaira-site {

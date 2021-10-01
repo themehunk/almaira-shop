@@ -269,12 +269,7 @@ function almaira_shop_product_search_box(){ ?>
                       
                        <div id='search-box' class="wow thmkfadeInDown" data-wow-duration="1s">
 
-                      <?php  if ( class_exists('TH_Advance_Product_Search')){
-               echo do_shortcode('[th-aps]');
-               }elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
-                $url = admin_url('themes.php?page=almaira-shop');
-                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please install th advance product search plugin','almaira-shop').'</a>';
-               } ?>
+                      <?php  almaira_shop_th_advance_product_search(); ?>
 
                    </div>
                    <span tabindex="0" id="close-btn" class="search-close-btn"></span>
@@ -329,4 +324,16 @@ function almaira_shop_preloader(){
    <?php }
    }
  }
+}
+
+//********************************
+//th advance product search 
+//*******************************
+function almaira_shop_th_advance_product_search(){
+  if ( class_exists('TH_Advance_Product_Search')){
+               echo do_shortcode('[th-aps]');
+               }elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
+                $url = admin_url('themes.php?page=almaira-shop');
+                      echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','almaira-shop').'</a>';
+               } 
 }
