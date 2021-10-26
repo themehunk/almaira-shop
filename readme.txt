@@ -24,6 +24,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 
 == Changelog ==
 
+= 1.2.5 =
+* Th option panel updated.
+
 = 1.2.4 =
 * Th advance product search plugin installation message style improved.
 * Th advance product search plugin added.

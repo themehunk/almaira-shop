@@ -33,8 +33,6 @@ get_template_part('customizer/custom-customizer');
 get_template_part('customizer/customizer');
 get_template_part('lib/breadcrumbs/breadcrumbs');
 
-get_template_part('lib/theme-option/class-almaira-shop-admin-settings');
-get_template_part('lib/theme-option/theme-option-function');
 /******************************/
 // woocommerce
 /******************************/
@@ -44,3 +42,5 @@ get_template_part( 'inc/woocommerce/woo-function');
 get_template_part('inc/woocommerce/woocommerce-ajax');
 //typography
 get_template_part('customizer/customizer-font-selector/functions');
+//th option
+get_template_part('lib/th-option/th-option');
