@@ -333,7 +333,7 @@ function almaira_shop_th_advance_product_search(){
   if ( class_exists('TH_Advance_Product_Search')){
                echo do_shortcode('[th-aps]');
                }elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
-                $url = admin_url('themes.php?page=thunk_started'); 
+                $url = admin_url('themes.php?page=thunk_started&searchp'); 
                       echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','almaira-shop').'</a>';
                } 
 }
