@@ -118,72 +118,64 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                                                  'thumbnail_image_width' => 320,
                                              ) );
          
-
          // Recommend plugins
         add_theme_support( 'recommend-plugins', array(
 
-        	'lead-form-builder' => array(
-                'name' => esc_html__( 'Lead Form Builder', 'almaira-shop' ),
+            'hunk-companion' => array(
+                'name' => esc_html__( 'Hunk Companion (Highly Recommended)', 'almaira-shop' ),
                 'img' => 'icon-128x128.png',
+                'active_filename' => 'hunk-companion/hunk-companion.php',
+            ),
+
+            'th-advance-product-search' => array(
+            'name' => esc_html__( 'TH Advance Product Search', 'almaira-shop' ),
+            'img' => 'icon-128x128.gif',
+            'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+            ),
+            'th-variation-swatches' => array(
+                'name' => esc_html__( 'TH Variation Swatches', 'almaira-shop' ),
+                 'img' => 'icon-128x128.gif',
+                'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
+            ),
+            'lead-form-builder' => array(
+                'name' => esc_html__( 'Lead Form Builder', 'almaira-shop' ),
+                 'img' => 'icon-128x128.png',
                 'active_filename' => 'lead-form-builder/lead-form-builder.php',
             ),
             'wp-popup-builder' => array(
                 'name' => esc_html__( 'WP Popup Builder – Popup Forms & Newsletter', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
+                 'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
-            ),
-
-            'th-advance-product-search' => array(
-                'name' => esc_html__( 'Th Advance Product Search', 'almaira-shop' ),
-                'img' => 'icon-128x128.gif',
-                'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
-            ),
-            'th-variation-swatches' => array(
-                'name' => esc_html__( 'Th Variation Swatches', 'almaira-shop' ),
-                'img' => 'icon-128x128.gif',
-                'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
             ), 
-
-             'hunk-companion' => array(
-                'name' => esc_html__( 'Hunk Companion', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'hunk-companion/hunk-companion.php',
+            'woocommerce' => array(
+                'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
+                 'img' => 'icon-128x128.png',
+                'active_filename' => 'woocommerce/woocommerce.php',
             ),
+
+            'yith-woocommerce-wishlist' => array(
+                 'name' => esc_html__( 'YITH WooCommerce Wishlist', 'almaira-shop' ),
+                  'img' => 'icon-128x128.jpg',
+                 'active_filename' => 'yith-woocommerce-wishlist/init.php',
+             ),
+            'yith-woocommerce-compare' => array(
+                 'name' => esc_html__( 'YITH WooCommerce Compare', 'almaira-shop' ),
+                  'img' => 'icon-128x128.jpg',
+                 'active_filename' => 'yith-woocommerce-compare/init.php',
+             ),
 
             'themehunk-megamenu-plus' => array(
                 'name' => esc_html__( 'ThemeHunk Megamenu – Menu builder', 'almaira-shop' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
             ), 
+            
 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-            'yith-woocommerce-wishlist' => array(
-                 'name' => esc_html__( 'YITH WooCommerce Wishlist', 'almaira-shop' ),
-                 'img' => 'icon-128x128.jpg',
-                 'active_filename' => 'yith-woocommerce-wishlist/init.php',
-             ),
-            'yith-woocommerce-compare' => array(
-                 'name' => esc_html__( 'YITH WooCommerce Compare', 'almaira-shop' ),
-                 'img' => 'icon-128x128.jpg',
-                 'active_filename' => 'yith-woocommerce-compare/init.php',
-             ),
-            
-            'instagram-feed' => array(
-                'name' => esc_html__( 'Custom Feeds for Instagram', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'instagram-feed/instagram-feed.php',
-            ),
-
-            
-            
         ) );
 
         // Import Data Content plugins
         add_theme_support( 'import-demo-content', array(
+
              'hunk-companion' => array(
                 'name' => esc_html__( 'Hunk Companion', 'almaira-shop' ),
                 'img' => 'icon-128x128.png',
@@ -205,6 +197,15 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
 
 
 
+        // Useful plugins
+        add_theme_support( 'useful-plugins', array(
+             'themehunk-megamenu-plus' => array(
+                'name' => esc_html__( 'Megamenu plugin from Themehunk.', 'almaira-shop' ),
+                'active_filename' => 'themehunk-megamenu-plus/themehunk-megamenu.php',
+            ),
+        ) );
+
+         
 	}
 endif;
 add_action( 'after_setup_theme', 'almaira_shop_setup' );

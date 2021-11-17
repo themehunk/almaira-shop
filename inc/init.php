@@ -44,3 +44,4 @@ get_template_part('inc/woocommerce/woocommerce-ajax');
 get_template_part('customizer/customizer-font-selector/functions');
 //th option
 get_template_part('lib/th-option/th-option');
+get_template_part('lib/th-option/child-notify');

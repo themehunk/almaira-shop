@@ -4,7 +4,7 @@ Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, fou
 Requires at least: WordPress 4.7
 Requires PHP: 5.6
 Tested up to: 5.8.1
-Stable tag: 1.2.4
+Stable tag: 1.2.6
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -25,6 +25,9 @@ Yes, this theme is tested with latest version of WordPress, you can use it for y
 == Changelog ==
 
 = 1.2.6 =
+* Th option panel updated.
+* Th option sidebar text updated.
+* Child theme notification added.
 * Th advance product search plugin url issue fixed.
 
 = 1.2.5 =
@@ -121,10 +124,11 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.4 =
-* Th advance product search plugin installation message style improved.
-* Th advance product search plugin added.
-* Th variation swatches plugin added.
+= 1.2.6 =
+* Th option panel updated.
+* Th option sidebar text updated.
+* Child theme notification added.
+* Th advance product search plugin url issue fixed.
 
 
 
