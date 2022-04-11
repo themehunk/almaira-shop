@@ -145,7 +145,7 @@ background-color: #fff;
 .menu-toggle .icon-bar{
     display: block !important;
     width: 25px;
-    height: 2px;
+    height:1px;
     background-color:#242424;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;

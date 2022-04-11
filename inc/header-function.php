@@ -239,23 +239,40 @@ if($sch_icon == true || $whs_icon == true || $acc_icon == true || $crt_icon == t
 <div class="main-header-col3">
 <div class="header-icon">
       <?php if(class_exists( 'WooCommerce' ) && $sch_icon == true){?>
-       <span><a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+       <span>
+       
+         <a class="prd-search-icon"><?php  if ( shortcode_exists('tapsp') ){
+
+          echo do_shortcode('[tapsp layout="icon_style"]'); 
+
+        }elseif( shortcode_exists('th-aps') ){
+
+              echo do_shortcode('[th-aps layout="icon_style"]'); 
+              
+        }?></a>  
+
+        </span>
                  <?php 
-                 almaira_shop_product_search_box(); 
+                 // almaira_shop_product_search_box(); 
                  ?>
      <?php }
     if( class_exists( 'YITH_WCWL' )){
       if($whs_icon == true){
         
         ?>
-       <span><a href="<?php echo esc_url( almaira_shop_whishlist_url() ); ?>"><i  class="fa fa-heart-o" aria-hidden="true"></i></a></span>
-     <?php } }if($acc_icon == true){
+       <span><a href="<?php echo esc_url( almaira_shop_whishlist_url() ); ?>"><i  class="th-icon th-icon-heartline" aria-hidden="true"></i></a></span>
+        <?php } }if($acc_icon == true){
         almaira_shop_account();
        } if($crt_icon == true){?>
        <span>
        <?php if(class_exists( 'WooCommerce' )){ 
-       do_action( 'almaira_cart_count' );
-       do_action( 'almaira_shop_woo_cart' ); } ?>
+
+        almaira_shop_th_cart();
+
+       // do_action( 'almaira_cart_count' );
+       // do_action( 'almaira_shop_woo_cart' ); 
+
+      } ?>
        </span>
      <?php }
    ?>
@@ -330,10 +347,56 @@ function almaira_shop_preloader(){
 //th advance product search 
 //*******************************
 function almaira_shop_th_advance_product_search(){
-  if ( class_exists('TH_Advance_Product_Search')){
-               echo do_shortcode('[th-aps]');
-               }elseif ( !class_exists('TH_Advance_Product_Search') && is_user_logged_in()) {
+   if ( shortcode_exists('th-aps') ){
+
+                echo do_shortcode('[th-aps]');
+
+              }elseif ( shortcode_exists('tapsp') ){
+
+                echo do_shortcode('[tapsp]');
+
+              }elseif (!shortcode_exists('th-aps') && !shortcode_exists('tapsp') && is_user_logged_in()) {
                 $url = admin_url('themes.php?page=thunk_started&searchp'); 
                       echo '<a href="'.$url.'" target="_blank" class="plugin-active-msg">'.__('Please Install "th advance product search" Plugin','almaira-shop').'</a>';
                } 
+}
+
+//********************************//
+//th woo cart 
+//*******************************//
+
+function almaira_shop_th_cart(){
+
+  if ( shortcode_exists('taiowc') ){ ?>
+
+             <div class="cart-icon">
+
+             <?php echo do_shortcode('[taiowc]');?>
+
+             </div>  
+
+             <?php  }elseif ( shortcode_exists('taiowcp') ){ ?>
+
+              <div class="cart-icon">
+
+             <?php echo do_shortcode('[taiowcp]');?>
+
+              </div>  
+
+             <?php  } elseif ( !shortcode_exists('taiowc') && !shortcode_exists('taiowcp') && is_user_logged_in()) {
+
+                $url = admin_url('themes.php?page=thunk_started&th-tab=recommended-plugin');
+
+                ?>
+
+                <a target="_blank" class="cart-plugin-active-msg" href="<?php echo esc_url($url);?>">
+
+                  <?php _e('Add Cart','open-shop');?>
+                  
+                </a>
+
+
+                <?php      
+
+            }
 }

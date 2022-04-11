@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/almaira-shop-multipurpose-responsive-ec
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Almaira Shop is a lightweight eCommerce multipurpose theme, You can create any type of store site using it. Best suited for furniture, grocery, clothing, electronic, food, home appliances site, gadget store, fashion shop and decorative stores. Theme option panel is so easy to use, Which definitely enhance your site making experience. Some theme features are #compare product, #quick view, #translation ready, #shop with category, #hero slider, #Product Filter, #Home shop, #Instagram feed, #call to action. Theme is deeply integrated with Woocommerce plugin. And comes with professionally designed desktop view as well as with specially focused Mobile view for better user experience. See demo here: https://themehunk.com/wp-themes/almaira-shop-light-scheme/.
-Version: 1.2.6
+Version: 1.2.7
 Requires at least: 4.5
 Tested up to: 5.8.1
 Requires PHP: 5.2.4
@@ -1363,27 +1363,73 @@ letter-spacing: initial;
 .thunk-quik .thunk-compare .woocommerce.product.compare-button{
   width:auto;
   margin:0;
-  line-height: 9px;
+  line-height: initial;
 }
 
 .thunk-quik .thunk-compare .woocommerce.product.compare-button a{
   font-size:0;
   bottom:auto;
   border-bottom:none;
+  margin: 0;
 }
 .thunk-quik .thunk-compare .woocommerce.product.compare-button a:hover:before{
   color: #bd8348;
 }
 .thunk-quik .thunk-compare .compare-button a:before{
-  content: "\f0ec";
-  font-family:FontAwesome;
+  content: "\e917";
+  font-family:th-icon;
   display: block;
   color: #9c9c9c;
-  font-size:16px;
+  font-size:14px;
   position: relative;
 }
 .thunk-quik .thunk-compare .compare-button a.added:before{
 color: #bd8348;
+}
+.woocommerce .entry-summary a.th-product-compare-btn {
+    border: 1px solid;
+    border-radius: 0;
+    color: #9c9c9c;
+    display: inline-block;
+    font-size: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    background: 0 0;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 400;
+    min-width: auto;
+    background: none;
+}
+.woocommerce .entry-summary a.th-product-compare-btn:before {
+    content: "\e917";
+    font-family: th-icon;
+    display: block;
+    color: #9c9c9c;
+    font-size: 13px;
+    padding: 0;
+}
+.woocommerce .entry-summary .th-product-compare-btn-wrap {
+    display: inline-block;
+}
+.woocommerce .entry-summary a.th-product-compare-btn:hover{
+  background:transparent;
+  color:#9c9c9c;
+}
+.th-product-compare-btn.loading:after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%!important;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 4px solid #436eee;
+    border-top-color: white;
+    animation: loaderTMKWithCenter 0.8s linear 0s infinite forwards!important;
 }
 /* Start: Recommended Isotope styles */
  
@@ -1468,8 +1514,8 @@ line-height: normal;
 }
 .thunk-product .yith-wcwl-wishlistexistsbrowse:before,
 .thunk-product .yith-wcwl-wishlistaddedbrowse:before{
-content: "\f004";
-font-family:'fontawesome';
+content: "\e909";
+font-family:'th-icon';
 color:#bd8348;
 font-size:16px;
 }
@@ -6219,6 +6265,66 @@ border: 1px solid #fff; text-align: center; padding:8px;}
   width: 50%;
   margin-bottom: 0;
 }
+.header-icon{
+display: inline-flex;
+align-items: center;
+}
+
+.header-icon .thaps-search-box,.header-icon .tapsp-search-box{
+max-width: inherit;
+min-width:auto;
+}
+.header-icon span{
+line-height:normal;
+}
+.main-header-col3 .header-icon a {
+    padding: 10px;
+    color: #242424;
+    display: flex;
+    align-items: center;
+}
+
+.main-header-col3 .header-icon a .th-icon {
+font-size:23px;
+
+}
+
+.header-icon .taiowc-cart-item,.header-icon .taiowcp-cart-item{
+padding:0;
+}
+.header-icon  .thaps-search-box .th-icon,
+.header-icon  .tapsp-search-box .th-icon{
+font-size: 23px;
+}
+
+.header-icon .taiowc-icon .th-icon.click-icon,
+.header-icon .taiowcp-icon .th-icon.click-icon{
+font-size: 30px;
+}
+.header-icon .taiowc-content .taiowc-total,.header-icon .taiowcp-content .taiowcp-total{
+display:none;
+}
+.header-icon  .cart-count-item {
+    position: absolute;
+    background: #111;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    font-size: 0.67rem;
+    top: -10px;
+    left: -8px;
+}
+.thunk-product .button.add_to_cart_button:before{
+content: "\e905";
+font-family:'th-icon';
+color:#bd8348;
+font-size:16px;
+}
+
+.taiowcp-icon .th-icon,.taiowc-icon .th-icon {
+    font-size: 28px!important;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 .woocommerce #content div.product .woocommerce-tabs, 
 .woocommerce div.product .woocommerce-tabs, 
@@ -6818,8 +6924,47 @@ margin-bottom:20px
 .woocommerce form .form-row textarea#order_comments{
   padding: 10px 15px;
 }
+.header-icon .cart-count-item {
+    position: absolute;
+    background: #111;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 0.67rem;
+    top: -9px;
+    left: 0px;
+}
+
+.taiowcp-icon .th-icon,.taiowc-icon .th-icon {
+    font-size: 26px;
+}
+.main-header-col3 .header-icon a {
+    padding:5px;
+    color: #242424;
+    
+
+}
+.main-header-col3 .header-icon a .th-icon{
+  font-size:21px;
+}
+
+.menu-toggle .icon-bar {
+    display: block !important;
+    width: 20px;
+
+}
+
 }
 @media only screen and (max-width: 490px){
+  .main-header-bar.two .main-header-col1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -moz-box-flex: 1;
+    -ms-flex: unset;
+    flex: auto;
+    text-align: inherit;
+    width: 50%;
+}
 .thunk-logo img{
   margin:auto;
 }

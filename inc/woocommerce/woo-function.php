@@ -178,7 +178,16 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'almaira_shop_product_cont
 // add to compare
 /****************/
 function almaira_shop_add_to_compare_fltr($pid=''){
-        if( is_plugin_active('yith-woocommerce-compare/init.php') ){
+
+      if(class_exists('th_product_compare') ||class_exists('Tpcp_product_compare')){
+        return'<div class="thunk-compare">
+              <span class="compare-list">
+              <div class="woocommerce product compare-button">
+              <a class="th-product-compare-btn compare" data-th-product-id="'.esc_attr($pid).'">'.__('Compare','open-shop').'</a>
+              </div>
+            </span>
+           </div>';
+     }elseif( is_plugin_active('yith-woocommerce-compare/init.php') ){
           return '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.home_url().'?action=yith-woocompare-add-product&id='.$pid.'" class="compare button" data-product_id="'.$pid.'" rel="nofollow">Compare</a></div></span></div>';
 
            }
@@ -194,7 +203,7 @@ add_action( 'woocommerce_after_single_product_summary', 'woocommerce_show_produc
 /**********************/
 function almaira_shop_whish_list(){
        if( shortcode_exists( 'yith_wcwl_add_to_wishlist' ) ){
-        return do_shortcode('[yith_wcwl_add_to_wishlist icon="fa fa-heart" browse_wishlist_text=""]' );
+        return do_shortcode('[yith_wcwl_add_to_wishlist icon="th-icon th-icon-favorite" browse_wishlist_text=""]' );
        }
  } 
 
@@ -207,10 +216,10 @@ return $wishlist_permalink ;
 /** My Account Menu **/
 function almaira_shop_account(){
  if ( is_user_logged_in() ) {
-  $return = '<span><a href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="fa fa-user-o" aria-hidden="true"></i></a></span>';
+  $return = '<span><a href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="th-icon th-icon-user" aria-hidden="true"></i></a></span>';
   } 
  else {
-  $return = '<span><a href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="fa fa-lock" aria-hidden="true"></i></a></span>';
+  $return = '<span><a href="'.get_permalink( get_option('woocommerce_myaccount_page_id') ).'"><i class="th-icon th-icon-user" aria-hidden="true"></i></a></span>';
 }
  echo $return;
  }
@@ -230,3 +239,6 @@ add_filter( 'woocommerce_show_page_title', 'not_a_shop_page' );
 function not_a_shop_page() {
     return boolval(!is_shop());
 }
+
+//To disable th compare button
+remove_action('woocommerce_init','th_compare_add_action_shop_list');
