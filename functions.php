@@ -5,13 +5,12 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  * @package ThemeHunk
  * @subpackage Almaira Shop
- * @since 1.0.0
  */
 /**
  * Theme functions and definitions
  */
 if ( ! function_exists( 'almaira_setup' ) ) :
-define( 'ALMAIRA_SHOP_VRSN','1.0.0');
+define( 'ALMAIRA_SHOP_VRSN','1.2.5');
 define( 'ALMAIRA_SHOP_THEME_DIR', get_template_directory() . '/' );
 define( 'ALMAIRA_SHOP_THEME_URI', get_template_directory_uri() . '/' );
 define( 'ALMAIRA_SHOP_THEME_FILE_URI', get_parent_theme_file_uri() . '/' );
