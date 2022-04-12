@@ -285,6 +285,7 @@ add_action( 'widgets_init', 'almaira_shop_widgets_init' );
 function almaira_shop_scripts(){
 	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	wp_enqueue_style( 'font-awesome',ALMAIRA_SHOP_THEME_URI. 'third-party/fonts/font-awesome/css/font-awesome.css', '', ALMAIRA_SHOP_VRSN );
+	wp_enqueue_style( 'th-icon',ALMAIRA_SHOP_THEME_URI. 'third-party/fonts/th-icon/style.css', '', ALMAIRA_SHOP_VRSN );
 	wp_enqueue_style( 'almaira-shop-menu-style', ALMAIRA_SHOP_THEME_URI. 'css/almaira-shop-menu.css','', ALMAIRA_SHOP_VRSN);
 	wp_enqueue_style( 'almaira-shop-style', get_stylesheet_uri(), array(), ALMAIRA_SHOP_VRSN );
     wp_add_inline_style('almaira-shop-style', almaira_shop_custom_style());
