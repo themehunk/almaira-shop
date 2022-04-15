@@ -6329,6 +6329,10 @@ font-size:16px;
     display: block!important;
 }
 
+.icon_style .tapsp-search-form,.icon_style .thaps-search-form{
+ z-index: 9!important; 
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 .woocommerce #content div.product .woocommerce-tabs, 
 .woocommerce div.product .woocommerce-tabs, 
@@ -7159,6 +7163,10 @@ margin-bottom:20px
 margin-bottom: 30px;
 }
 
+.icon_style .tapsp-search-form,.icon_style .thaps-search-form {
+    min-width: 320px!important;
+  }
+  
 }
 
 @media (max-width: 480px){
