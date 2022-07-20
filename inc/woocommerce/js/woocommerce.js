@@ -54,6 +54,10 @@ jQuery(document).ready(function(){
       return false;
   });
 });
+//Below Footer
+jQuery("footer .bottom-footer,footer .bottom-footer-bar,.bottom-footer-col1,.bottom-footer .container,.bottom-footer-container").attr('style', 'display: block !important');
+jQuery(".th-ftrdescription a").attr('style', 'display: inline-block !important');
+
 //***************************
 // cheked-item by sort filter
 // **************************
