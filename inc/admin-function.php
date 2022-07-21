@@ -378,7 +378,7 @@ function almaira_shop_get_header(){ ?>
 				</div> 
 
 			<?php }elseif(class_exists( 'WooCommerce' ) && is_shop()) { ?>
-				<h2 class="thunk-page-top-title entry-title"><?php woocommerce_page_title(); ?></h2>
+				<h1 class="thunk-page-top-title entry-title"><?php woocommerce_page_title(); ?></h1>
 				<div class="thunk-breadcrumb-wrapper">
 					<?php almaira_shop_breadcrumb();?>
 				</div> 
