@@ -183,12 +183,12 @@ function almaira_shop_add_to_compare_fltr($pid=''){
         return'<div class="thunk-compare">
               <span class="compare-list">
               <div class="woocommerce product compare-button">
-              <a class="th-product-compare-btn compare" data-th-product-id="'.esc_attr($pid).'">'.__('Compare','open-shop').'</a>
+              <a class="th-product-compare-btn compare" data-th-product-id="'.esc_attr($pid).'">'.__('Compare','almaira-shop').'</a>
               </div>
             </span>
            </div>';
      }elseif( is_plugin_active('yith-woocommerce-compare/init.php') ){
-          return '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.home_url().'?action=yith-woocompare-add-product&id='.$pid.'" class="compare button" data-product_id="'.$pid.'" rel="nofollow">Compare</a></div></span></div>';
+          return '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.home_url().'?action=yith-woocompare-add-product&id='.esc_attr($pid).'" class="compare button" data-product_id="'.esc_attr($pid).'" rel="nofollow">Compare</a></div></span></div>';
 
            }
         }

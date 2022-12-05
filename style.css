@@ -4,7 +4,7 @@ Theme URI: https://themehunk.com/product/almaira-shop-multipurpose-responsive-ec
 Author: ThemeHunk
 Author URI: https://www.themehunk.com
 Description: Almaira Shop is a lightweight eCommerce multipurpose theme, You can create any type of store site using it. Best suited for furniture, grocery, clothing, electronic, food, home appliances site, gadget store, fashion shop and decorative stores. Theme option panel is so easy to use, Which definitely enhance your site making experience. Some theme features are #compare product, #quick view, #translation ready, #shop with category, #hero slider, #Product Filter, #Home shop, #Instagram feed, #call to action. Theme is deeply integrated with Woocommerce plugin. And comes with professionally designed desktop view as well as with specially focused Mobile view for better user experience. See demo here: https://themehunk.com/wp-themes/almaira-shop-light-scheme/.
-Version: 1.2.6
+Version: 1.2.7
 Requires at least: 4.5
 Tested up to: 6.1
 Requires PHP: 5.2.4
@@ -3122,7 +3122,7 @@ transform: rotate(-90deg);
 }
 #move-to-top{
     right: -10px;
-    bottom: 50px;
+    bottom: 152px;
 }
 #move-to-top i{
   vertical-align: middle;
@@ -6485,6 +6485,10 @@ height: 0;
 }
 }
 @media only screen and (max-width: 767px){
+h2{
+    font-size: 18px;
+    line-height: 1.2;
+}
 .content-area{
   padding: 30px 0;
 }
@@ -6914,8 +6918,11 @@ margin-bottom:20px
     display: flex;
     margin: 0;
 }
-.bottom-footer-container{line-height:25px!important;padding: 10px 0px;}
-
+.bottom-footer-container{line-height:25px!important;padding: 10px 0px;
+}
+.site-title p{
+  font-size: 18px;
+}
 }
 @media only screen and (max-width: 550px){
 

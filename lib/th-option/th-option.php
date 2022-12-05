@@ -41,8 +41,8 @@ function tab_constant(){
     $tab_array = array();
     $tab_array['header'] = array('theme_brand' => __('ThemeHunk','almaira-shop'),
     'theme_brand_url' => esc_url($theme_data->get( 'AuthorURI' )),
-    'welcome'=>sprintf(esc_html__('Welcome To %1s Theme', 'almaira-shop'), esc_html__($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
-    'welcome_desc' => esc_html__($theme_data->get( 'Name' ).' is a lightweight eCommerce multipurpose theme.', 'almaira-shop' ),
+    'welcome'=>sprintf(esc_html__('Welcome To %1s Theme', 'almaira-shop'), esc_html($theme_data->get( 'Name' )), $theme_data->get( 'Version' ) ),
+    'welcome_desc' => esc_html($theme_data->get( 'Name' ).' is a lightweight eCommerce multipurpose theme.', 'almaira-shop' ),
     'v'=> 'Version '.$theme_data->get( 'Version' )
     );
     return $tab_array;

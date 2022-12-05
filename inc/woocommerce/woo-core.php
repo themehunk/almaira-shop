@@ -273,7 +273,7 @@ if ( ! class_exists( 'Almaira_Shop_Woocommerce_Ext' ) ) :
 		          <span class="compare-list">
 
 		          <div class="woocommerce product compare-button">
-		          <a class="th-product-compare-btn compare" data-th-product-id="'.esc_attr($pid).'">'.__('Compare','open-shop').'</a>
+		          <a class="th-product-compare-btn compare" data-th-product-id="'.esc_attr($pid).'">'.__('Compare','almaira-shop').'</a>
 		          </div>
 		        </span>
 
