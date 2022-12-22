@@ -96,11 +96,6 @@ function almaira_shop_bottom_footer_markup_lite(){
             <div class="bottom-footer-container">
                  <div class="bottom-footer-col1 th-ftrdescription"> 
                  <?php
-  $bottom_footer_cont = get_theme_mod('almaira_shop_footer_bottom_col1_texthtml','');
-          if ($bottom_footer_cont != '') {
-            echo esc_html($bottom_footer_cont);
-          }
-          else{
             $allowed_html = array(
                                   'a' => array(
                                   'href' => array(),
@@ -111,10 +106,10 @@ function almaira_shop_bottom_footer_markup_lite(){
                               'em' => array(),
                               'strong' => array(),
                           );
-                $url = "https://themehunk.com";
+                $url = esc_url("https://themehunk.com");
               echo  sprintf( 
                 wp_kses( __( 'Almaira Shop developed by <a href="%s" target="_blank">ThemeHunk</a>', 'almaira-shop' ), $allowed_html), esc_url( $url ) );
-          }
+          
                  ?> 
                  </div>
                </div>

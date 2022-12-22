@@ -227,7 +227,7 @@ function almairaShopSetCss( settings, to ){
 //*****************************/
 // Global Color Custom Style
 //*****************************/
-almaira_shop_css( 'almaira_shop_theme_clr','color', '.th-slider-bigheading,a:hover,.thunk-category a:hover .title,.thunk-category a:hover .count,#move-to-top:hover,h2.entry-title a,#sidebar-primary h2.widget-title,.woocommerce h1.product_title, .woocommerce-Tabs-panel h2, .related.products h2, section.up-sells h2, .cross-sells h2, .cart_totals h2, .woocommerce-billing-fields h3, .woocommerce-account .addresses .title h3');
+almaira_shop_css( 'almaira_shop_theme_clr','color', '.th-slider-bigheading,a:hover,.thunk-category a:hover .title,.thunk-category a:hover .count,#move-to-top:hover,h2.entry-title a,#sidebar-primary h4.widget-title,.woocommerce h1.product_title, .woocommerce-Tabs-panel h2, .related.products h2, section.up-sells h2, .cross-sells h2, .cart_totals h2, .woocommerce-billing-fields h3, .woocommerce-account .addresses .title h3');
 almaira_shop_css( 'almaira_shop_theme_clr','background', '.thunk-category-section .owl-nav i,.thunk-brands-section .owl-nav i,.container input:checked ~ .checkmark,.thunk-button:hover,.woocommerce li.product .thunk-product span.onsale,.woocommerce nav.woocommerce-pagination ul li span.current');
 almaira_shop_css( 'almaira_shop_theme_clr','border-color', '.thunk-category a:hover,.thunk-counter-wrapper .counter-content:hover,body .woocommerce-tabs .tabs li a::before');
 almaira_shop_css( 'background','background', '.thunk-body');

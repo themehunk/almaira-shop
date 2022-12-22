@@ -225,8 +225,8 @@ function almaira_shop_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in your primary sidebar.', 'almaira-shop' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="almaira-widget-content">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Above Header First Widget', 'almaira-shop' ),
@@ -234,8 +234,8 @@ function almaira_shop_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top header.', 'almaira-shop' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Above Header Second Widget', 'almaira-shop' ),
@@ -243,8 +243,8 @@ function almaira_shop_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top header.', 'almaira-shop' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
     register_sidebar(array(
 		'name'          => esc_html__( 'Footer Top First Widget', 'almaira-shop' ),
@@ -252,8 +252,8 @@ function almaira_shop_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'almaira-shop' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	register_sidebar(array(
 		'name'          => esc_html__( 'Footer Top Second Widget', 'almaira-shop' ),
@@ -261,8 +261,8 @@ function almaira_shop_widgets_init(){
 		'description'   => esc_html__( 'Add widgets here to appear in top footer.', 'almaira-shop' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 	for ( $i = 1; $i <= 4; $i++ ){
 		register_sidebar( array(

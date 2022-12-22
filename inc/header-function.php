@@ -391,7 +391,7 @@ function almaira_shop_th_cart(){
 
                 <a target="_blank" class="cart-plugin-active-msg" href="<?php echo esc_url($url);?>">
 
-                  <?php _e('Add Cart','open-shop');?>
+                  <?php _e('Add Cart','almaira-shop');?>
                   
                 </a>
 

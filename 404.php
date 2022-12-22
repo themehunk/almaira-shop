@@ -18,7 +18,7 @@ get_header();
 			<article id="error-404" >
 			<div class="error-404 not-found">
 				<div class="error-heading">
-					<h2 class="thunk-page-top-title entry-title"><?php esc_html_e( '404', 'almaira-shop' ); ?></h2>
+					<h1 class="thunk-page-top-title entry-title"><?php esc_html_e( '404', 'almaira-shop' ); ?></h1>
 					<h3><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'almaira-shop' ); ?></h3>
 				</div><!-- .error-heading -->
 
