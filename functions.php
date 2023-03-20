@@ -131,6 +131,11 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
             'img' => 'icon-128x128.gif',
             'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
             ),
+			'th-all-in-one-woo-cart' => array(
+				'name' => esc_html__( 'Th All In One Woo Cart', 'almaira-shop' ),
+				'img' => 'icon-128x128.gif',
+				'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
+				),
             'th-variation-swatches' => array(
                 'name' => esc_html__( 'TH Variation Swatches', 'almaira-shop' ),
                  'img' => 'icon-128x128.gif',
@@ -146,6 +151,11 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
+			'unlimited-blocks' => array(
+                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'almaira-shop' ),
+                 'img' => 'icon-128x128.png',
+				 'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
+            ), 
             'woocommerce' => array(
                 'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
                  'img' => 'icon-128x128.png',
@@ -156,11 +166,6 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                  'name' => esc_html__( 'YITH WooCommerce Wishlist', 'almaira-shop' ),
                   'img' => 'icon-128x128.jpg',
                  'active_filename' => 'yith-woocommerce-wishlist/init.php',
-             ),
-            'yith-woocommerce-compare' => array(
-                 'name' => esc_html__( 'YITH WooCommerce Compare', 'almaira-shop' ),
-                  'img' => 'icon-128x128.jpg',
-                 'active_filename' => 'yith-woocommerce-compare/init.php',
              ),
 
             'themehunk-megamenu-plus' => array(
@@ -191,6 +196,16 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'woocommerce/woocommerce.php',
             ),
+			'th-all-in-one-woo-cart' => array(
+				'name' => esc_html__( 'Th All In One Woo Cart', 'almaira-shop' ),
+				'img' => 'icon-128x128.gif',
+				'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
+				),
+				'th-advance-product-search' => array(
+					'name' => esc_html__( 'TH Advance Product Search', 'almaira-shop' ),
+					'img' => 'icon-128x128.gif',
+					'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
+					)
 
         ));
 

@@ -279,11 +279,7 @@ if ( ! class_exists( 'Almaira_Shop_Woocommerce_Ext' ) ) :
 
 		       </div>';
 
-		 }elseif( is_plugin_active('yith-woocommerce-compare/init.php') ){
-          return '<div class="thunk-compare"><span class="compare-list"><div class="woocommerce product compare-button"><a href="'.home_url().'?action=yith-woocompare-add-product&id='.esc_attr($pid).'" class="compare button" data-product_id="'.esc_attr($pid).'" rel="nofollow">Compare</a></div></span></div>';
-
-           }
-           
+		 }
         }
 
 
