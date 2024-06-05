@@ -6,7 +6,7 @@
             <p>
             <b><?php _e('Pre-made premium templates','almaira-shop'); ?> </b><br>
             <?php _e('Almaira Shop Pro is one of the most popular eCommerce theme on WordPress.','almaira-shop'); ?> </p>
-                <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/almaira-pro-multipurpose-responsive-ecommerce-theme/"><?php _e('Upgrade','almaira-shop'); ?> </a></center>
+                <center><a class="button ztabtn" target="_blank" href="https://themehunk.com/product/almaira-pro-multipurpose-responsive-ecommerce-theme/"><?php _e('Upgrade To Pro','almaira-shop'); ?> </a></center>
             </div>
             <hr>
             <div class="section">

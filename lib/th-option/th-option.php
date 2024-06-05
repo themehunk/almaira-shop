@@ -27,7 +27,7 @@ wp_enqueue_script('almaira-shop-admin-load', get_template_directory_uri() . '/li
 $data = apply_filters(
                     'th_option_localize_vars',
                     array(
-                        'oneClickDemo' =>esc_url( admin_url( 'themes.php?page=pt-one-click-demo-import' )),
+                        'oneClickDemo' =>esc_url( admin_url( 'themes.php?page=themehunk-site-library' )),
 
                         )
                 );

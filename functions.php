@@ -10,7 +10,7 @@
  * Theme functions and definitions
  */
 if ( ! function_exists( 'almaira_setup' ) ) :
-define( 'ALMAIRA_SHOP_VRSN','1.2.5');
+define( 'ALMAIRA_SHOP_VRSN','1.2.9');
 define( 'ALMAIRA_SHOP_THEME_DIR', get_template_directory() . '/' );
 define( 'ALMAIRA_SHOP_THEME_URI', get_template_directory_uri() . '/' );
 define( 'ALMAIRA_SHOP_THEME_FILE_URI', get_parent_theme_file_uri() . '/' );
@@ -141,6 +141,11 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                  'img' => 'icon-128x128.gif',
                 'active_filename' => 'th-variation-swatches/th-variation-swatches.php',
             ),
+			'vayu-blocks' => array(
+                'name' => esc_html__( 'Vayu blocks For Gutenberg', 'almaira-shop' ),
+                 'img' => 'icon-128x128.png',
+				 'active_filename' => 'vayu-blocks/vayu-blocks.php',
+            ), 
             'lead-form-builder' => array(
                 'name' => esc_html__( 'Lead Form Builder', 'almaira-shop' ),
                  'img' => 'icon-128x128.png',
@@ -151,17 +156,6 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                  'img' => 'icon-128x128.png',
                 'active_filename' => 'wp-popup-builder/wp-popup-builder.php',
             ), 
-			'unlimited-blocks' => array(
-                'name' => esc_html__( 'Unlimited blocks For Gutenberg', 'almaira-shop' ),
-                 'img' => 'icon-128x128.png',
-				 'active_filename' => 'unlimited-blocks/unlimited-blocks.php',
-            ), 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
-                 'img' => 'icon-128x128.png',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-
             'yith-woocommerce-wishlist' => array(
                  'name' => esc_html__( 'YITH WooCommerce Wishlist', 'almaira-shop' ),
                   'img' => 'icon-128x128.jpg',
@@ -184,31 +178,8 @@ define( 'ALMAIRA_SHOP_THEME_SETTINGS', 'almaira-settings' );
                 'name' => esc_html__( 'Hunk Companion', 'almaira-shop' ),
                 'img' => 'icon-128x128.png',
                 'active_filename' => 'hunk-companion/hunk-companion.php',
-            ),
-
-            'one-click-demo-import' => array(
-                'name' => esc_html__( 'One Click Demo Import', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'one-click-demo-import/one-click-demo-import.php',
-            ), 
-            'woocommerce' => array(
-                'name' => esc_html__( 'Woocommerce', 'almaira-shop' ),
-                'img' => 'icon-128x128.png',
-                'active_filename' => 'woocommerce/woocommerce.php',
-            ),
-			'th-all-in-one-woo-cart' => array(
-				'name' => esc_html__( 'Th All In One Woo Cart', 'almaira-shop' ),
-				'img' => 'icon-128x128.gif',
-				'active_filename' => 'th-all-in-one-woo-cart/th-all-in-one-woo-cart.php',
-				),
-				'th-advance-product-search' => array(
-					'name' => esc_html__( 'TH Advance Product Search', 'almaira-shop' ),
-					'img' => 'icon-128x128.gif',
-					'active_filename' => 'th-advance-product-search/th-advance-product-search.php',
-					)
-
+            )
         ));
-
 
 
         // Useful plugins
