@@ -281,7 +281,11 @@ function almaira_shop_scripts(){
     wp_enqueue_script( 'almaira-shop-menu-js', ALMAIRA_SHOP_THEME_FILE_URI.'js/almaira-shop-menu.js', array( 'jquery' ), ALMAIRA_SHOP_VRSN, true );
    if (class_exists( 'WooCommerce' ) ){
      wp_enqueue_script( 'almaira-shop-woocommerce-js', ALMAIRA_SHOP_THEME_FILE_URI.'inc/woocommerce/js/woocommerce.js', array( 'jquery' ), ALMAIRA_SHOP_VRSN, true );
-     wp_localize_script( 'almaira-shop-woocommerce-js', 'almairawoo', array( 'wp_ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+     wp_localize_script( 'almaira-shop-woocommerce-js', 'almairawoo', 
+	 array( 
+	'wp_ajax_url' => admin_url( 'admin-ajax.php' ),
+    'alnonce'   => wp_create_nonce( 'almaira_nonce' ) ),
+	);
     }
     wp_enqueue_script('almaira-shop-custom-js', ALMAIRA_SHOP_THEME_FILE_URI.'js/almaira-custom.js', array( 'jquery' ), ALMAIRA_SHOP_VRSN , true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ){

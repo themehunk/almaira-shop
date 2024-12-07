@@ -74,7 +74,8 @@ var $checkes = jQuery('input:checkbox[name="prd_cat[]"],input:radio[name="radio"
           var data = {
            'cat_slug':check_vals,
            'radio_slug':radio_vals,
-           'action': 'almaira_shop_sort_filter_ajax'
+           'action': 'almaira_shop_sort_filter_ajax',
+           'nonce':almairawoo.alnonce
          };
         jQuery.post(
            almairawoo.wp_ajax_url, // The AJAX URL
@@ -112,6 +113,7 @@ jQuery( document ).ready( function( $ ){
         paged: currentpaged,
         'cat_slug':check_vals,
         'radio_slug':radio_vals,
+        'nonce':almairawoo.alnonce
       },
       dataType: 'html'
     })
@@ -305,6 +307,7 @@ function almaira_filter_product($input){
                                action :'almaira_shop_product_section_filter_product_ajax',
                                'cat_slug':$cateSlug,
                                'paged': $lfb_page,
+                               'nonce':almairawoo.alnonce
                                
                              },
                             dataType: 'html',
