@@ -111,7 +111,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'almaira_sh
                 'section'               => 'almaira-shop-main-header',
                 'settings'              => 'almaira_shop_main_header_search_disable',
             ) ) );
-if( class_exists( 'YITH_WCWL' )){
+
 $wp_customize->add_setting( 'almaira_shop_main_header_whislist_disable', array(
                 'default'               => true,
                 'sanitize_callback'     => 'almaira_shop_sanitize_checkbox',
@@ -122,7 +122,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'almaira_sh
                 'section'               => 'almaira-shop-main-header',
                 'settings'              => 'almaira_shop_main_header_whislist_disable',
             ) ) );
-}
+
 $wp_customize->add_setting( 'almaira_shop_main_header_account_disable', array(
                 'default'               => true,
                 'sanitize_callback'     => 'almaira_shop_sanitize_checkbox',

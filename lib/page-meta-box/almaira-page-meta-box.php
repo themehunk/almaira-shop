@@ -22,36 +22,7 @@ if ( ! function_exists( 'almaira_shop_admin_scripts' ) ) :
 endif;
 add_action( 'admin_enqueue_scripts', 'almaira_shop_admin_scripts' );
 
-$prefix='almaira_shop_';
 
-$meta_boxes = array(
-      array(
-        'id' => 'almaira-meta-box',
-        'title' => esc_html__('Dynamic Sidebar','almaira-shop'),
-        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
-        'context' => 'side',
-        'priority' => 'low',
-        'fields' => array(
-            array(
-                'name' => '',
-                'id' => $prefix . 'sidebar_dyn',
-                'type' => 'select',
-                'std' => 'no-sidebar',
-                'options' => array( 
-                    array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','almaira-shop')),
-                    array("value" => 'right',"name" => esc_html__('Right Sidebar','almaira-shop')),
-                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','almaira-shop')),
-                    
-                	
-                 )
-             ),
-              
-        )
-    )
-);
-foreach ($meta_boxes as $meta_box){
-    $my_box = new almaira_shop_thMetaDataClass($meta_box);
-}
 
 class almaira_shop_thMetaDataClass {
  
@@ -159,3 +130,39 @@ class almaira_shop_thMetaDataClass {
         }
     }
 }
+
+
+
+function almaira_shop_register_meta_boxes() {
+    $prefix='almaira_shop_';
+
+$meta_boxes = array(
+      array(
+        'id' => 'almaira-meta-box',
+        'title' => esc_html__('Dynamic Sidebar','almaira-shop'),
+        'pages' => array('page','post','product'),// custom post type array('page','post', 'link')
+        'context' => 'side',
+        'priority' => 'low',
+        'fields' => array(
+            array(
+                'name' => '',
+                'id' => $prefix . 'sidebar_dyn',
+                'type' => 'select',
+                'std' => 'no-sidebar',
+                'options' => array( 
+                    array("value" => 'no-sidebar',"name" => esc_html__('No Sidebar','almaira-shop')),
+                    array("value" => 'right',"name" => esc_html__('Right Sidebar','almaira-shop')),
+                    array("value" => 'left',"name" =>  esc_html__('Left Sidebar','almaira-shop')),
+                    
+                    
+                 )
+             ),
+              
+        )
+    )
+);
+foreach ($meta_boxes as $meta_box){
+    $my_box = new almaira_shop_thMetaDataClass($meta_box);
+}
+}
+add_action( 'init', 'almaira_shop_register_meta_boxes' );

@@ -256,12 +256,13 @@ if($sch_icon == true || $whs_icon == true || $acc_icon == true || $crt_icon == t
                  // almaira_shop_product_search_box(); 
                  ?>
      <?php }
-    if( class_exists( 'YITH_WCWL' )){
+    if( shortcode_exists( 'thwl_add_to_wishlist' ) || class_exists( 'YITH_WCWL' )){
       if($whs_icon == true){
         
         ?>
        <span><a href="<?php echo esc_url( almaira_shop_whishlist_url() ); ?>"><i  class="th-icon th-icon-heartline" aria-hidden="true"></i></a></span>
-        <?php } }if($acc_icon == true){
+        <?php } }
+        if($acc_icon == true){
         almaira_shop_account();
        } if($crt_icon == true){?>
        <span>

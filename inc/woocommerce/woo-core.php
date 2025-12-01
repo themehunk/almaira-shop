@@ -303,8 +303,8 @@ if ( ! class_exists( 'Almaira_Shop_Woocommerce_Ext' ) ) :
                                    </a>
                                     </span>
                           </div>';
-            if(class_exists( 'YITH_WCWL' )):
-            $button.= '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.almaira_shop_whish_list().'</span></div>';
+            if( shortcode_exists( 'thwl_add_to_wishlist' ) || class_exists( 'YITH_WCWL' )):
+            $button.= '<div class="thunk-wishlist"><span class="thunk-wishlist-inner">'.almaira_shop_whish_list($product_id).'</span></div>';
             endif;
             $button.= $this->almaira_shop_add_to_compare($product_id);
             $button.= '</div>';

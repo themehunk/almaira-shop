@@ -198,16 +198,34 @@ add_action( 'woocommerce_after_single_product_summary', 'woocommerce_show_produc
 /**********************/
 /** wishlist **/
 /**********************/
-function almaira_shop_whish_list(){
-       if( shortcode_exists( 'yith_wcwl_add_to_wishlist' ) ){
+function almaira_shop_whish_list($pid = ''){
+  if (shortcode_exists( 'thwl_add_to_wishlist' ) ) {
+       return do_shortcode('[thwl_add_to_wishlist 
+                            product_id="' . esc_attr($pid) . '" 
+                            add_icon="th-icon th-icon-heart1" 
+                            add_text="" 
+                            add_browse_icon="th-icon th-icon-favorite"
+                            browse_text=""
+                            theme_style="yes"
+                            icon_style="icon_only_no_style"
+                            custom_class="th-wishlist-integrated"
+                        ]');
+  }
+    elseif( shortcode_exists( 'yith_wcwl_add_to_wishlist' ) ){
         return do_shortcode('[yith_wcwl_add_to_wishlist icon="th-icon th-icon-favorite" browse_wishlist_text=""]' );
        }
  } 
 
 function almaira_shop_whishlist_url(){
-$wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
-$wishlist_permalink = get_the_permalink( $wishlist_page_id );
-return $wishlist_permalink ;
+ $wishlist_page_id = '';
+        if (shortcode_exists( 'thwl_add_to_wishlist' )) {
+          $wishlist_page_id =  get_option( 'thwl_page_id' );
+        }
+        elseif( class_exists( 'YITH_WCWL' ) ){
+          $wishlist_page_id =  get_option( 'yith_wcwl_wishlist_page_id' );
+        }
+    $wishlist_permalink = get_the_permalink($wishlist_page_id);
+    return $wishlist_permalink;
 }
 // shop almaira
 /** My Account Menu **/
@@ -241,3 +259,8 @@ function not_a_shop_page() {
 //To disable th compare button
 remove_action('woocommerce_init','th_compare_add_action_shop_list');
 remove_action('woocommerce_init','tpcp_add_action_shop_list');
+// To disable Wishlist button for loop button at shop page
+remove_action( 'wp', 'thwl_hook_wishlist_loop_button_position');
+
+// To disable Wishlist button for loop button at single page
+// remove_action( 'wp', 'thwl_hook_wishlist_single_button_position');
